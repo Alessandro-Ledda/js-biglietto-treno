@@ -2,6 +2,7 @@
 
     //SETUP (VARIABII UTILI)
     const prezzoKm = 0.21;
+    let risultato;
     
 
 //INPUT (VARIABILI E DATI IN INGRESSO)
@@ -28,19 +29,23 @@
     if (etaUser <= 18){
         //applica sconto del 20%
         const prezzoScontato = (prezzoTrattaTot * 20) / 100;
-        console.log(prezzoScontato + " " + "euro")
+        risultato = `il costo del tuo biglietto è scontato del 20% e corrisponde a ${prezzoScontato}`
+        //console.log(prezzoScontato + " " + "euro")
 
 
         //SE USER HA ETA'>= A 65 (SCONTO 40%)
     }else if (etaUser >= 65){ 
         const prezzoScontato = (prezzoTrattaTot * 40) / 100;
-        console.log(prezzoScontato + " " + "euro")
-    } else {
-        console.log(prezzoTrattaTot)
+        risultato = `il costo del tuo biglietto è scontato del 40% e corrisponde a ${prezzoScontato}`
+        //console.log(prezzoScontato + " " + "euro")
+    }else {
+        risultato = ("il costo del tuo biglietto corrisponde a" + " " + prezzoTrattaTot);
+        //console.log(prezzoTrattaTot)
     }
 
 
         
 
 //OUTPUT(PREZZO FINALE CON NON PIù DI DUE CIFRE DECIMALI)
+    document.getElementById("risultato").innerHTML = risultato;
 
