@@ -49,3 +49,4 @@
 //OUTPUT(PREZZO FINALE CON NON PIù DI DUE CIFRE DECIMALI)
     document.getElementById("risultato").innerHTML = risultato;
 
+    
